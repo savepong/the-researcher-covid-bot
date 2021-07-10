@@ -22,15 +22,16 @@ const MetaHead = () => (
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@600&family=Sarabun:wght@400;500;700&display=swap" rel="stylesheet" />
     <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_gAnalytics}`}></script>
+
     <script dangerouslySetInnerHTML={{
       __html: `window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-V6Q0C8MG7Q');`}} />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="/cover-vaccination.png" />
+    <meta property="og:image" content="https://covid-19.researcherth.co/cover-vaccination.png" />
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:image" content="/cover-vaccination.png" />
+    <meta property="twitter:image" content="https://covid-19.researcherth.co/cover-vaccination.png" />
   </Head>
 )
 
@@ -52,7 +53,7 @@ const Overview = () => {
   return (
     <div className='container text-center mb-4'>
       <h1>ความคืบหน้าการฉีดวัคซีน COVID-19 ในประเทศไทย</h1>
-      <span className='text-muted small'>อัพเดทเมื่อ {updateDate && moment(updateDate).add(1,"day").format('LL')}</span>
+      <span className='text-muted small'>อัพเดทเมื่อ {updateDate && moment(updateDate).add(1, "day").format('LL')}</span>
       <div className='row mt-4' >
         <div className='col-md-8'>
           <National setTodayData={setTodayData} setUpdateDate={setUpdateDate} />
